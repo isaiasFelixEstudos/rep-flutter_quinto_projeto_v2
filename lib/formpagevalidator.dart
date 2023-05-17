@@ -48,8 +48,18 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorNome,
                 decoration: InputDecoration(
+                  errorStyle:
+                      TextStyle(color: _formValido ? Colors.blue : Colors.red),
+                  errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: _formValido ? Colors.blue : Colors.red)),
                   labelText: 'NOME',
                 ),
+                onChanged: (value) {
+                  setState(() {
+                    _formValido = value.isNotEmpty;
+                  });
+                },
                 validator: (String? nome) {
                   if (nome == null || nome.isEmpty) {
                     return 'Preencha o campo';
@@ -65,8 +75,18 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorCpf,
                 decoration: InputDecoration(
+                  errorStyle:
+                      TextStyle(color: _formValido ? Colors.blue : Colors.red),
+                  errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: _formValido ? Colors.blue : Colors.red)),
                   labelText: 'CPF',
                 ),
+                onChanged: (value) {
+                  setState(() {
+                    _formValido = value.isNotEmpty;
+                  });
+                },
                 validator: (String? cpf) {
                   if (cpf == null || cpf.isEmpty) {
                     return 'Preencha o campo';
@@ -82,8 +102,18 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorContato,
                 decoration: InputDecoration(
+                  errorStyle:
+                      TextStyle(color: _formValido ? Colors.blue : Colors.red),
+                  errorBorder: OutlineInputBorder(
+                      borderSide: BorderSide(
+                          color: _formValido ? Colors.blue : Colors.red)),
                   labelText: 'CONTATO',
                 ),
+                onChanged: (value) {
+                  setState(() {
+                    _formValido = value.isNotEmpty;
+                  });
+                },
                 validator: (String? contato) {
                   if (contato == null || contato.isEmpty) {
                     return 'Preencha o campo';

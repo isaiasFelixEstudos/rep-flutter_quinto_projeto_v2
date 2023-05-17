@@ -34,7 +34,9 @@ class _FormPageState extends State<FormPage> {
             child: TextField(
               controller: _controladorNome,
               decoration: InputDecoration(
-                  labelText: 'Nome', border: OutlineInputBorder()),
+                labelText: 'Nome',
+                border: OutlineInputBorder(),
+              ),
             ),
           ),
           Padding(
