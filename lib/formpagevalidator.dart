@@ -48,19 +48,8 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorNome,
                 decoration: InputDecoration(
-                  errorStyle:
-                      TextStyle(color: _formValido ? Colors.green : Colors.red),
                   labelText: 'NOME',
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: _formValido ? Colors.blue : Colors.red),
-                  ),
                 ),
-                onChanged: (value) {
-                  setState(() {
-                    _formValido = value.isNotEmpty;
-                  });
-                },
                 validator: (String? nome) {
                   if (nome == null || nome.isEmpty) {
                     return 'Preencha o campo';
@@ -76,19 +65,8 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorCpf,
                 decoration: InputDecoration(
-                  errorStyle:
-                      TextStyle(color: _formValido ? Colors.green : Colors.red),
                   labelText: 'CPF',
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: _formValido ? Colors.blue : Colors.red),
-                  ),
                 ),
-                onChanged: (value) {
-                  setState(() {
-                    _formValido = value.isNotEmpty;
-                  });
-                },
                 validator: (String? cpf) {
                   if (cpf == null || cpf.isEmpty) {
                     return 'Preencha o campo';
@@ -104,19 +82,8 @@ class _FormPageValidatorState extends State<FormPageValidator> {
                 autovalidateMode: AutovalidateMode.onUserInteraction,
                 controller: _controladorContato,
                 decoration: InputDecoration(
-                  errorStyle:
-                      TextStyle(color: _formValido ? Colors.green : Colors.red),
                   labelText: 'CONTATO',
-                  errorBorder: OutlineInputBorder(
-                    borderSide: BorderSide(
-                        color: _formValido ? Colors.blue : Colors.red),
-                  ),
                 ),
-                onChanged: (value) {
-                  setState(() {
-                    _formValido = value.isNotEmpty;
-                  });
-                },
                 validator: (String? contato) {
                   if (contato == null || contato.isEmpty) {
                     return 'Preencha o campo';
@@ -127,12 +94,6 @@ class _FormPageValidatorState extends State<FormPageValidator> {
               ),
               SizedBox(
                 height: 10,
-              ),
-              Container(
-                child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Enviar cadastro'),
-                ),
               ),
             ],
           ),
