@@ -23,8 +23,8 @@ class _FormPageState extends State<FormPage> {
 
   @override
   Widget build(BuildContext context) {
-    final largura = MediaQuery.of(context).size.width;
-    final altura = MediaQuery.of(context).size.height;
+    //final largura = MediaQuery.of(context).size.width;
+    //final altura = MediaQuery.of(context).size.height;
 
     return Scaffold(
       body: Column(

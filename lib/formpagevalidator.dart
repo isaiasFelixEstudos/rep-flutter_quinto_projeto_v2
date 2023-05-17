@@ -9,7 +9,7 @@ class FormPageValidator extends StatefulWidget {
 
 class _FormPageValidatorState extends State<FormPageValidator> {
   final _formkey = GlobalKey<FormState>();
-  bool _emailValido = false;
+  //bool _emailValido = false;
   bool _formValido = false;
   TextEditingController _controladorNome = TextEditingController();
   TextEditingController _controladorCpf = TextEditingController();
